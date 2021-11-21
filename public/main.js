@@ -21,8 +21,8 @@ function getWeather(e) {
 
 //fetch weather from api
 function weatherBalloon(cityID) {
-    // fetch('http://localhost:3000/weather?city=' + cityID)
-    fetch('https://weather-city-now.herokuapp.com?city=' + cityID)
+    fetch('http://localhost:3000/weather?city=' + cityID)
+        // fetch('https://weather-city-now.herokuapp.com?city=' + cityID)
         .then(function (resp) {
             return resp.json();
         }) // Convert data to json
@@ -63,8 +63,8 @@ function weatherBalloon(cityID) {
             console.log(err.message, 'err mess');
         });
     //forecast
-    // fetch('http://localhost:3000/forecast?city=' + cityID)
-    fetch('https://weather-city-now.herokuapp.com/forecast?city=' + cityID)
+    fetch('http://localhost:3000/forecast?city=' + cityID)
+        // fetch('https://weather-city-now.herokuapp.com/forecast?city=' + cityID)
         .then(function (resp) {
             return resp.json();
         })
