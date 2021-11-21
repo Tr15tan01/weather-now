@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+  link(rel='stylesheet' type='text/css' href='styles.css')
+  title Weather
+.container-fluid.p-3
+  .row.p-3
+    .col-sm
+      form#weatherform
+        input#cities(type='text' placeholder='search here..')
+        input(type='submit' name='Search Weather')
+  .row.p-3
+    .col
+      h4#notification
+      h2 Current Weather
+      h2=fuck
+      h1#city(style='color:magenta;font-weight:bold;')
+  .row
+    .col-lg-4
+      img#weimg(width='200')
+    .col-lg-4.degree
+      span#temp.degree  
+      | 
+    .col-lg-4.info
+      span#description.info  
+      p
+        | wind speed: 
+        span#wind.info  
+        |  km/h.
+  .row.p-3
+    .col
+      h2
+        u 3
+        |  Day Weather
+  #forecast.row
+    .col-sm-4
+      img.imgico(width='100')
+      p.date  
+      p.temp  
+      p.desc  
+    .col-sm-4
+      img.imgico(width='100')
+      p.date  
+      p.temp  
+      p.desc  
+    .col-sm-4
+      img.imgico(width='100')
+      p.date  
+      p.temp  
+      p.desc  
+//- script(src='main.js' type='module')
+script(src='main.js')
