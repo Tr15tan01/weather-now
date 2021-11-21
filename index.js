@@ -5,7 +5,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'pug');
 app.set('views', './views');
 // require("dotenv").config();
-app.use('/favicon.ico', express.static('favicon.ico'));
+app.use('/favicon.ico', express.static('media/favicon.ico'));
 
 const port = process.env.PORT || 3000;
 
