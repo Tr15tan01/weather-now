@@ -11,8 +11,8 @@ const port = process.env.PORT || 3000;
 const { currentWeatherUrl, forecastUrl, getWeather } = require('./utils/weather.js')
 
 app.get('/', (req, res) => {
-    // res.render('index')
-    res.send('This test is done too..')
+    res.render('index')
+    // res.send('This test is done too..')
 })
 
 app.get('/weather', (req, res) => {
