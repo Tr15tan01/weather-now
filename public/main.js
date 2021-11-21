@@ -1,14 +1,23 @@
 //images for weather
-const imgs = {
-    Clouds: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clouds-icon.png",
-    Thunderstorm: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-storm-icon.png",
-    Drizzle: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-showers-scattered-icon.png",
-    Rain: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-showers-scattered-icon.png",
-    Snow: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-snow-icon.png",
-    Clear: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clear-icon.png",
-    Mist: "http://icon-library.com/images/fog-icon-png/fog-icon-png-6.jpg"
-}
+// const imgs = {
+//     Clouds: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clouds-icon.png",
+//     Thunderstorm: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-storm-icon.png",
+//     Drizzle: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-showers-scattered-icon.png",
+//     Rain: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-showers-scattered-icon.png",
+//     Snow: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-snow-icon.png",
+//     Clear: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clear-icon.png",
+//     Mist: "http://icon-library.com/images/fog-icon-png/fog-icon-png-6.jpg"
+// }
 
+const imgs = {
+    Clouds: "/media/Status-weather-clouds-icon.png",
+    Thunderstorm: "/media/Status-weather-storm-icon.png",
+    Drizzle: "/media/Status-weather-showers-scattered-icon.png",
+    Rain: "/media/Status-weather-showers-scattered-icon.png",
+    Snow: "/media/Status-weather-snow-icon.png",
+    Clear: "/media/Status-weather-clear-icon.png",
+    Mist: "/media/fog-icon-png-6.jpg"
+}
 
 const input = document.getElementById('cities')
 
@@ -21,8 +30,8 @@ function getWeather(e) {
 
 //fetch weather from api
 function weatherBalloon(cityID) {
-    fetch('http://localhost:3000/weather?city=' + cityID)
-        // fetch('https://weather-city-now.herokuapp.com?city=' + cityID)
+    // fetch('http://localhost:3000/weather?city=' + cityID)
+    fetch('https://weather-city-now.herokuapp.com?city=' + cityID)
         .then(function (resp) {
             return resp.json();
         }) // Convert data to json
@@ -63,8 +72,8 @@ function weatherBalloon(cityID) {
             console.log(err.message, 'err mess');
         });
     //forecast
-    fetch('http://localhost:3000/forecast?city=' + cityID)
-        // fetch('https://weather-city-now.herokuapp.com/forecast?city=' + cityID)
+    // fetch('http://localhost:3000/forecast?city=' + cityID)
+    fetch('https://weather-city-now.herokuapp.com/forecast?city=' + cityID)
         .then(function (resp) {
             return resp.json();
         })

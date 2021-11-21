@@ -9,7 +9,6 @@ async function getWeather(cityID = 'chicago', url) {
         let data = res.data
         return data
     } catch (error) {
-        console.log(error.name, 'fuckin errror')
         let res = await axios.get(url + 'chicago' + "&appid=" + key)
         let data = res.data
         data.additional = `City - ${cityID} - not found, try another place...`
