@@ -31,7 +31,7 @@ function getWeather(e) {
 //fetch weather from api
 function weatherBalloon(cityID) {
     // fetch('http://localhost:3000/weather?city=' + cityID)
-    fetch('https://weather-city-now.herokuapp.com?city=' + cityID)
+    fetch('https://weather-city-now.herokuapp.com/weather?city=' + cityID)
         .then(function (resp) {
             return resp.json();
         }) // Convert data to json
