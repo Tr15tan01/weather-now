@@ -1,76 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 span {
-	color: magenta;
-	font-size: 18px;
-	padding: 12px;
+  color: magenta;
+  font-size: 18px;
+  padding: 12px;
 }
 
 div {
-	text-align: center;
-	font-size: 24px;
+  text-align: center;
+  font-size: 24px;
+}
+
+nav,
+footer {
+  background-color: rgb(38, 35, 35);
+  min-height: 36px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
 }
 
 .body-light {
-	background: linear-gradient(-45deg, #00ff99, #00e64d, #23a6d5, #6699ff);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background: linear-gradient(-45deg, #00ff99, #00e64d, #23a6d5, #6699ff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .degree {
-	font-size: 64px;
-	font-weight: bold;
-	padding: 24px 0;
+  font-size: 64px;
+  font-weight: bold;
+  padding: 24px 0;
 }
 
 .info {
-	font-size: 24px;
-	padding: 24px 0;
+  font-size: 24px;
+  padding: 24px 0;
 }
 
 h2 {
-	color: slateblue;
+  color: slateblue;
 }
 
 .date {
-	color: darkviolet;
+  color: darkviolet;
 }
 
 .temp {
-	font-size: 24px;
-	font-weight: bold;
-	color: magenta;
+  font-size: 24px;
+  font-weight: bold;
+  color: magenta;
 }
 
 #notification {
-	color: rgb(180, 27, 116);
+  color: rgb(180, 27, 116);
 }
 
+input {
+  border-radius: 3px;
+  padding: 6px 24px;
+  margin: 12px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+/* 
 input[type=text] {
-	border-radius: 6px;
+	border-radius: 3px;
 	padding: 3px;
-}
-
-input[type=submit] {
-	color: white;
-	background-color: dodgerblue;
-	border-radius: 6px;
-	padding: 3px 24px;
 	outline: none;
+	border: none;
+	font-size: 18px;
+}
+*/
+input[type="submit"] {
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 3px;
+  padding: 6px 30px;
+  margin: 12px;
+  outline: none;
+  border: none;
 }
 
 @media (max-width: 768px) {
-	div {
-		font-size: 36px;
-	}
+  div {
+    font-size: 36px;
+  }
+
+  input {
+    width: 100%;
+    margin: auto;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    margin: auto;
+  }
 }

@@ -6,6 +6,8 @@ head
   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
   link(rel='stylesheet' type='text/css' href='styles.css')
   title Weather
+nav.align-middle
+ p Weather App - Search For Weather   
 .container-fluid.p-3
   .row.p-3
     .col-sm
@@ -16,7 +18,7 @@ head
     .col
       h4#notification
       h2 Current Weather
-      h2=fuck
+      //- h2=fuck
       h1#city(style='color:magenta;font-weight:bold;')
   .row
     .col-lg-4
@@ -50,6 +52,8 @@ head
       img.imgico(width='100')
       p.date  
       p.temp  
-      p.desc  
+      p.desc
+footer
+  p copyright &copy tristanvaramashvili.dev        
 //- script(src='main.js' type='module')
 script(src='main.js')
